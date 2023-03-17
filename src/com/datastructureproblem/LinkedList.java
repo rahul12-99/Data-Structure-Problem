@@ -10,7 +10,7 @@ public class LinkedList {
         obj.addToFront(myFirstNode);
         obj.appendToLast(mySecondNode);
         obj.appendToLast(myThirdNode);
-        obj.popFirstNode();
+        obj.popLastNode();
 
         obj.printMyNodes();
 
