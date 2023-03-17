@@ -33,16 +33,15 @@ public class MyLinkedList {
             this.tail = newNode;
         }
     }
-    public void insertAfterParticularNode(INode previousNode, INode newNode) {
-        INode tempNode = previousNode.getNext();
-        previousNode.setNext(newNode);
-        newNode.setNext(tempNode);
-    }
-    public INode deleteAfterParticularNode(INode previousNode, INode delNode) {
-        INode tempNode = delNode.getNext();
-        previousNode.setNext(tempNode);
-        tempNode.setNext(null);
-        return tempNode;
+    public void sortNode(INode previousNode, INode newNode) {
+        if ((int) previousNode.getKey() < (int) newNode.getKey()) {
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+        }else {
+            INode tempNode = this.head;
+            this.head = newNode;
+            this.head.setNext(tempNode);
+        }
     }
 
     public void printMyNodes() {
