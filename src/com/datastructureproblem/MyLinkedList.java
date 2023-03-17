@@ -33,14 +33,15 @@ public class MyLinkedList {
             this.tail = newNode;
         }
     }
-    public INode popLastNode() {
+    public void searchNode(INode searchNode) {
         INode tempNode = head;
-        while (!tempNode.getNext().equals(tail)){
+        while (!tempNode.getNext().equals(null)) {
+            if (tempNode.getKey().equals(searchNode.getKey())) {
+                System.out.println("Search key : " +tempNode.getKey());
+                break;
+            }
             tempNode=tempNode.getNext();
         }
-        INode removedNode = tempNode.getNext();
-        tempNode.setNext(null);
-        return removedNode;
     }
 
     public void printMyNodes() {
