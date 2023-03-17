@@ -11,6 +11,9 @@ public class LinkedList {
         obj.sortNode(myFirstNode,mySecondNode);
         obj.sortNode(mySecondNode,myThirdNode);
 
+        MyNode<Integer> myNewNode = new MyNode<>(40);
+        obj.insertAfterParticularNode(mySecondNode, myNewNode);
+
         obj.printMyNodes();
 
     }

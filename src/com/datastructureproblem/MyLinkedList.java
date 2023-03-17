@@ -33,6 +33,11 @@ public class MyLinkedList {
             this.tail = newNode;
         }
     }
+    public void insertAfterParticularNode(INode previousNode, INode newNode) {
+        INode tempNode = previousNode.getNext();
+        previousNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
     public void sortNode(INode previousNode, INode newNode) {
         if ((int) previousNode.getKey() < (int) newNode.getKey()) {
             this.tail.setNext(newNode);
