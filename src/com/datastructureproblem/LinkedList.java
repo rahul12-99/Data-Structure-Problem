@@ -2,14 +2,14 @@ package com.datastructureproblem;
 
 public class LinkedList {
     public static void main(String[] args) {
-        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(56);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
 
-        MyLinkedList obj = new MyLinkedList();
+        MyLinkedList obj= new MyLinkedList();
         obj.addToFront(myFirstNode);
-        obj.addToFront(mySecondNode);
-        obj.addToFront(myThirdNode);
+        obj.appendToLast(mySecondNode);
+        obj.appendToLast(myThirdNode);
 
         obj.printMyNodes();
 
