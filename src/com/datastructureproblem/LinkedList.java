@@ -8,8 +8,8 @@ public class LinkedList {
 
         MyLinkedList obj= new MyLinkedList();
         obj.addToFront(myFirstNode);
-        obj.appendToLast(mySecondNode);
         obj.appendToLast(myThirdNode);
+        obj.insertFirst(mySecondNode);
 
         obj.printMyNodes();
 
