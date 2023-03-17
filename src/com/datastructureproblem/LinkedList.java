@@ -10,7 +10,8 @@ public class LinkedList {
         obj.addToFront(myFirstNode);
         obj.appendToLast(mySecondNode);
         obj.appendToLast(myThirdNode);
-        obj.searchNode(mySecondNode);
+        MyNode<Integer> myNewNode = new MyNode<>(40);
+        obj.insertAfterParticularNode(mySecondNode,myNewNode);
 
         obj.printMyNodes();
 
