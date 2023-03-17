@@ -6,10 +6,11 @@ public class LinkedList {
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
 
-        MyLinkedList obj= new MyLinkedList();
+        MyLinkedList obj = new MyLinkedList();
         obj.addToFront(myFirstNode);
+        obj.appendToLast(mySecondNode);
         obj.appendToLast(myThirdNode);
-        obj.insertFirst(mySecondNode);
+        obj.popFirstNode();
 
         obj.printMyNodes();
 

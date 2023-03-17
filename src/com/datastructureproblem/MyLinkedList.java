@@ -33,10 +33,10 @@ public class MyLinkedList {
             this.tail = newNode;
         }
     }
-    public void insertFirst(INode newNode) {
-        INode tempNode = this.head.getNext();
-        this.head.setNext(newNode);
-        newNode.setNext(tail);
+    public INode popFirstNode() {
+        INode tempNode = this.head;
+        this.head=head.getNext();
+        return tempNode;
     }
 
     public void printMyNodes() {
