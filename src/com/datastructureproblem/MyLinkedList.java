@@ -23,6 +23,11 @@ public class MyLinkedList {
         }
     }
 
+    public INode popFirstNode() {
+        INode tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
+    }
     public void appendToLast(INode newNode) {
         if (this.tail == null) {
             this.tail = newNode;
@@ -33,34 +38,6 @@ public class MyLinkedList {
             this.tail.setNext(newNode);
             this.tail = newNode;
         }
-    }
-
-    public void insertMethodFirst(INode newNode) {
-        INode tempNode = this.head.getNext();
-        this.head.setNext(newNode);
-        newNode.setNext(tail);
-    }
-
-    public void insertMethodSecond(INode firstNode, INode nextNode) {
-        INode tempNode = firstNode.getNext();
-        firstNode.setNext(nextNode);
-        nextNode.setNext(tempNode);
-    }
-
-    public INode popFirstNode() {
-        INode tempNode = this.head;
-        this.head = head.getNext();
-        return tempNode;
-    }
-
-    public INode popLastNode() {
-        INode tempNode = head;
-        while (!tempNode.getNext().equals(tail)) {
-            tempNode = tempNode.getNext();
-        }
-        INode removedNode = tempNode.getNext();
-        tempNode.setNext(null);
-        return removedNode;
     }
 
     public void printMyNodes() {
