@@ -7,9 +7,11 @@ public class MyStackList<K> {
         myLinkedList.appendToLast(element);
     }
 
-    public void printStack() {
-        myLinkedList.printMyNodes();
-
+    public INode dequeue() {
+        return myLinkedList.popFirstNode();
     }
 
+    public void printStack() {
+        myLinkedList.printMyNodes();
+    }
 }
